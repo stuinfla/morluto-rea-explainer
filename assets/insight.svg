@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" data-archetype="exchange" font-family="Helvetica, Arial, sans-serif">
+<title>A claim only becomes ink if it was touched</title>
+<desc>Two claims come from the AI helper on the left. A middle ledger checks each one against the program on the right. The claim with a place it was found becomes solid ink. The claim with no place stays a red dashed question.</desc>
+<style>
+.t{fill:#2B2A28;font-size:23px}.tb{fill:#2B2A28;font-size:26px;font-weight:700}.m{fill:#47443E;font-size:20px;font-family:Menlo,Consolas,monospace}.red{fill:#C8402E;font-size:23px;font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+ .ink{stroke-dasharray:300;stroke-dashoffset:300;animation:ink 8s ease-in-out infinite}
+ .tag{opacity:0;animation:tag 8s ease-in-out infinite}
+ .hold{animation:hold 8s ease-in-out infinite}
+}
+@keyframes ink{0%,10%{stroke-dashoffset:300}35%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:300}}
+@keyframes tag{0%,30%{opacity:0}40%,92%{opacity:1}100%{opacity:0}}
+@keyframes hold{0%,40%{opacity:.2}55%,92%{opacity:1}100%{opacity:.2}}
+</style>
+<rect width="1000" height="620" fill="#F3EDDC"/>
+<text x="40" y="52" class="tb">The pen only draws where the stylus touched.</text>
+<text x="40" y="96" class="t" style="font-size:21px;fill:#47443E">Question: how does search work?</text>
+<!-- left: claims -->
+<text x="40" y="150" class="tb" style="font-size:22px">what the helper says</text>
+<rect x="30" y="170" width="260" height="130" rx="12" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="46" y="208" class="t">“It matches</text><text x="46" y="238" class="t">what you type</text><text x="46" y="268" class="t">as you go.”</text>
+<rect x="30" y="360" width="260" height="130" rx="12" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="46" y="398" class="t">“Then it sorts</text><text x="46" y="428" class="t">by newest</text><text x="46" y="458" class="t">first.”</text>
+<!-- middle: ledger -->
+<rect x="390" y="130" width="220" height="400" rx="14" fill="#E6CF98" stroke="#8C6420" stroke-width="4"/>
+<text x="500" y="176" text-anchor="middle" class="tb">evidence</text><text x="500" y="208" text-anchor="middle" class="tb">ledger</text>
+<text x="500" y="500" text-anchor="middle" class="t" style="font-size:20px">checks every claim</text>
+<line x1="410" y1="232" x2="590" y2="232" stroke="#8C6420" stroke-width="2"/>
+<!-- right: program -->
+<text x="710" y="150" class="tb" style="font-size:22px">the program itself</text>
+<rect x="710" y="170" width="260" height="130" rx="12" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="726" y="212" class="t">typing handler</text><text x="726" y="248" class="m">search.js:212</text><text x="726" y="278" class="t" style="font-size:20px">touched ✓</text>
+<rect x="710" y="360" width="260" height="130" rx="12" fill="#1F1E1C" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="726" y="408" class="t" style="fill:#F3EDDC">sealed step</text><text x="726" y="446" class="t" style="fill:#F3EDDC;font-size:20px">no way in yet</text>
+<!-- arrows -->
+<path d="M290 235H390" stroke="#2B2A28" stroke-width="3"/><path d="M610 235H710" stroke="#2B2A28" stroke-width="3"/>
+<path class="ink" d="M290 235H390M610 235H710" stroke="#2B2A28" stroke-width="7" fill="none"/>
+<g class="tag"><rect x="402" y="248" width="196" height="34" rx="6" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="500" y="272" text-anchor="middle" class="m" style="font-size:19px">found: line 212</text></g>
+<g class="hold"><path d="M290 425H390" stroke="#C8402E" stroke-width="4" stroke-dasharray="10 9"/><path d="M610 425H700" stroke="#C8402E" stroke-width="4" stroke-dasharray="10 9"/><path d="M700 413V437" stroke="#C8402E" stroke-width="5"/></g>
+<g class="hold"><rect x="404" y="390" width="192" height="70" rx="8" fill="#FAF6EA" stroke="#C8402E" stroke-width="3" stroke-dasharray="8 6"/><text x="500" y="420" text-anchor="middle" class="red">unknown</text><text x="500" y="447" text-anchor="middle" class="t" style="font-size:19px;fill:#C8402E">not reached</text></g>
+<text x="40" y="560" class="t" style="font-size:22px">Touched → kept as ink, with where it was found.</text>
+<text x="40" y="594" class="t" style="font-size:22px;fill:#C8402E">Not touched → left as a red question, never a guess.</text>
+</svg>

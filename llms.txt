@@ -1,0 +1,18 @@
+# REA
+
+> The pen only draws where the stylus touched.
+
+REA lets an AI helper take apart programs you have no source for, and every claim comes with the place it was found.
+
+This is an independent, art-directed explainer for morluto's REA — it takes a newcomer from "never seen it" to "ready to implement", grounded in a real RVF knowledge base of the source.
+
+## What it is
+REA: A drafting pantograph on vellum: the stylus arm traces a stranger's sealed mechanism while the linked pen arm redraws it to scale on your sheet — and the pen physically lifts off the paper wherever the stylus cannot reach.
+
+## For your AI
+A downloadable knowledge pack (RVF vector KB + MCP server) ships with this page so your agent can search the source too: https://rea-explainer.netlify.app/rea-knowledge-pack.zip
+
+## Links
+- Live explainer: https://rea-explainer.netlify.app/
+- Source repository: https://github.com/morluto/rea
+- AI knowledge pack: https://rea-explainer.netlify.app/rea-knowledge-pack.zip

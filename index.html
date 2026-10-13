@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REA — see how any app works, with proof</title>
+  <meta name="description" content="REA lets an AI helper take apart programs you have no source for, and every claim comes with the place it was found.">
+  <meta name="author" content="Independent explainer for morluto's REA — built by Stuart Kerr at ISOvision.ai">
+  <link rel="canonical" href="https://rea-explainer.netlify.app/">
+  <meta name="theme-color" content="#7A5617">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="REA — see how any app works, with proof">
+  <meta property="og:description" content="The pen only draws where the stylus touched.">
+  <meta property="og:url" content="https://rea-explainer.netlify.app/">
+  <meta property="og:image" content="https://rea-explainer.netlify.app/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="REA — see how any app works, with proof">
+  <meta name="twitter:description" content="The pen only draws where the stylus touched.">
+  <meta name="twitter:image" content="https://rea-explainer.netlify.app/assets/social-card.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "REA",
+  "description": "REA lets an AI helper take apart programs you have no source for, and every claim comes with the place it was found.",
+  "url": "https://rea-explainer.netlify.app/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Cross-platform",
+  "image": "https://rea-explainer.netlify.app/assets/social-card.png",
+  "author": {
+    "@type": "Person",
+    "name": "morluto"
+  },
+  "codeRepository": "https://github.com/morluto/rea",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="prov-banner">
+    <div class="wrap prov-banner-inner">
+      <p class="prov-attr">An independent explainer for <strong>morluto</strong>'s <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">REA</a> — built to help you actually implement it.</p>
+      <p class="prov-live"><span class="prov-dot" aria-hidden="true">&#9679;</span> source <code>github.com/morluto/rea</code></p>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="REA explainer home">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="8" fill="none" stroke="var(--accent)" stroke-width="2"></rect>
+        <rect x="9" y="9" width="14" height="14" rx="4" fill="var(--accent-2)"></rect>
+        <circle cx="16" cy="16" r="3" fill="var(--on-accent)"></circle>
+      </svg>
+        <span>REA</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#what-it-is">What it is</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#get-started">Get started</a>
+        <a href="#the-pack">AI pack</a>
+        <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">GitHub &#8599;</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+  <a id="top"></a>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Reverse Engineer Anything</span>
+          <h1>See a feature you love in someone else's app? Find out how it works — with proof.</h1>
+          <p class="lede">REA (short for Reverse Engineer Anything) lets an AI helper (a chatbot that can use tools) study a program you don't have the recipe for. Every claim it makes comes with the spot where it found it.</p>
+          <p class="sub">Where it can't look, it says so in red instead of guessing.</p>
+          <p class="attrib-lede">An <strong>independent explainer</strong> for <strong>morluto <span class="attrib-handle">(morluto)</span></strong>'s <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">REA</a> — built to take you from "never seen it" to "ready to implement".</p>
+          <div class="cta-row">
+          <a class="cta" href="#get-started">Get started</a>
+          <a class="cta ghost" href="https://github.com/morluto/rea" target="_blank" rel="noopener">See the code</a>
+          </div>
+        <div class="meta-row"><span><b>License</b> MIT</span><span><b>Version</b> 6.4.0</span><span><b>Runs</b> on your computer</span></div>
+        </div>
+        <figure class="hero-art">
+          <button type="button" class="diagram-zoom" data-src="assets/hero.png" data-alt="REA: A top-down bench shot on cream vellum: a brass pantograph pinned at the top-left corner; at its left tip a steel stylus rests against a disassembled blue-grey cam-and-lever mechanism (the 'feature' from someone else's app); at its right tip a graphite pen has half-drawn the same cam at 2:1 scale, each stroke carrying a tiny mono tag like 'sub_1F3A0 +0x24' or 'renderer/search.js:212'; one lobe of the cam sits inside a sealed black housing, and on the sheet that lobe is a dashed red-pencil outline stamped 'NOT REACHED — runtime trace required'." aria-label="Enlarge: REA: A top-down bench shot on cream vellum: a brass pantograph pinned at the top-left corner; at its left tip a steel stylus rests against a disassembled blue-grey cam-and-lever mechanism (the 'feature' from someone else's app); at its right tip a graphite pen has half-drawn the same cam at 2:1 scale, each stroke carrying a tiny mono tag like 'sub_1F3A0 +0x24' or 'renderer/search.js:212'; one lobe of the cam sits inside a sealed black housing, and on the sheet that lobe is a dashed red-pencil outline stamped 'NOT REACHED — runtime trace required'."><img src="assets/hero.png" alt="REA: A top-down bench shot on cream vellum: a brass pantograph pinned at the top-left corner; at its left tip a steel stylus rests against a disassembled blue-grey cam-and-lever mechanism (the 'feature' from someone else's app); at its right tip a graphite pen has half-drawn the same cam at 2:1 scale, each stroke carrying a tiny mono tag like 'sub_1F3A0 +0x24' or 'renderer/search.js:212'; one lobe of the cam sits inside a sealed black housing, and on the sheet that lobe is a dashed red-pencil outline stamped 'NOT REACHED — runtime trace required'."></button>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="scene-band" data-hero-scene aria-label="How REA works, performed">
+    <div class="wrap">
+      <figure class="scene-fig">
+        <img src="assets/hero-scene.svg" alt="REA only writes down what it touched: a probe touches two spots in a program and a solid line draws to each claim with its evidence. A third spot it cannot reach stays unknown, shown as a red dashed NOT SEEN claim." width="960" height="460">
+      </figure>
+      <figure class="scene-3d" data-hero-3d-wrap hidden>
+        <div class="scene-3d-host" data-hero-3d aria-hidden="true"></div>
+        <figcaption>The same idea in 3D: a sealed box, two spots probed and lit, one face that stays dark.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <style>
+    .scene-band{padding:8px 0 28px}
+    .scene-fig{margin:0}.scene-fig img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 18px 50px -24px rgba(43,42,40,.45)}
+    .scene-3d{margin:18px 0 0}.scene-3d[hidden]{display:none}
+    .scene-3d-host{width:100%;aspect-ratio:16/6;border-radius:18px;background:#F3EDDC;border:1px solid #CFC3A3;overflow:hidden}
+    .scene-3d figcaption{font-size:.9rem;color:#47443E;margin-top:8px}
+    @media (max-width:640px){.scene-3d-host{aspect-ratio:4/3}}
+  </style>
+  <script type="module">
+    (async () => {
+      const wrap = document.querySelector('[data-hero-3d-wrap]'), host = document.querySelector('[data-hero-3d]');
+      if (!wrap || !host) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      try {
+        const c = document.createElement('canvas');
+        if (!(c.getContext('webgl2') || c.getContext('webgl'))) return;
+        wrap.hidden = false;
+        const m = await import('./assets/hero3d.mjs');
+        await m.mount(host, { label: 'A sealed box probed in two spots; a third face stays unknown' });
+      } catch (e) { wrap.hidden = true; }
+    })();
+  </script>
+    <div class="sections">
+      <div class="wrap">
+    <details class="section" id="problem" open>
+      <summary>
+        <span class="num">01</span>
+        <span class="head-text">
+          <h2>You can only see the outside</h2>
+          <span class="q">Why does this exist?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">You open a popular app and its search finds your notes instantly. You want that in your own project. But the app is a sealed box.</p>
+      <p>So you guess. You poke at it for a weekend, then ship a copy of what you <em>think</em> it does.</p>
+      <p>You could use special tools to look inside. But each kind of program needs its own tool, and none of them share notes. Ask a chatbot instead, and you get a confident paragraph that points at nothing: no place, no file, no line.</p>
+      <p>That is a drawing with no measurements.</p>
+      
+      <figure class="figure">
+        <span class="tier friendly">The problem</span>
+        <button type="button" class="diagram-zoom" data-src="assets/problem.png" data-alt="REA: the problem" aria-label="Enlarge: REA: the problem"><img src="assets/problem.png" alt="REA: the problem" loading="lazy"></button>
+      </figure>
+      
+      <p class="note honest"><span class="lab">The pain</span>A guess you can't check is worse than no answer. You build on it, and find the mistake later.</p>
+      </div>
+    </details>
+
+    <details class="section" id="what-it-is" open>
+      <summary>
+        <span class="num">02</span>
+        <span class="head-text">
+          <h2>One door into many kinds of program</h2>
+          <span class="q">What does it actually do?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">REA gives your AI helper a set of tools for looking inside programs. It works on apps, web code, websites, phone apps and more.</p>
+      <p>You ask a plain question, like “how does search work in this app?” The helper picks the right tool and looks. Then it writes back what it found, where it found it, and what it could not reach.</p>
+      <p>The helper can then write your own version and test it. Everything runs on your computer.</p>
+      
+      <figure class="figure diagram concept">
+        <span class="tier tech">The big idea</span>
+        <button type="button" class="diagram-zoom" data-src="assets/big-idea.svg" data-alt="Your question goes to an AI helper, then REA, which fans out to six kinds of target: desktop apps, web-app code, websites, Android apps, device firmware and running programs. Answers return with evidence and gaps." aria-label="Enlarge: Your question goes to an AI helper, then REA, which fans out to six kinds of target: desktop apps, web-app code, websites, Android apps, device firmware and running programs. Answers return with evidence and gaps."><img src="assets/big-idea.svg" alt="Your question goes to an AI helper, then REA, which fans out to six kinds of target: desktop apps, web-app code, websites, Android apps, device firmware and running programs. Answers return with evidence and gaps." loading="lazy"></button>
+      </figure>
+      </div>
+    </details>
+
+    <details class="section" id="the-insight" open>
+      <summary>
+        <span class="num">03</span>
+        <span class="head-text">
+          <h2>The pen only draws where the stylus touched</h2>
+          <span class="q">Why is it elegant?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">Picture a drawing tool with two arms. One arm traces the real thing. The other arm copies each line onto your page. The copy arm cannot move unless the tracing arm touched something.</p>
+      <p>REA works the same way. A finding is only kept if the tool really touched it, and the finding carries the place. A claim with no touch stays a red question mark.</p>
+      
+      <figure class="figure diagram concept">
+        <span class="tier tech">The aha</span>
+        <button type="button" class="diagram-zoom" data-src="assets/insight.svg" data-alt="The AI helper's two claims are checked by an evidence ledger against the program. The claim that was touched at search.js line 212 becomes solid ink; the claim about the sealed sorting step stays a red dashed unknown." aria-label="Enlarge: The AI helper's two claims are checked by an evidence ledger against the program. The claim that was touched at search.js line 212 becomes solid ink; the claim about the sealed sorting step stays a red dashed unknown."><img src="assets/insight.svg" alt="The AI helper's two claims are checked by an evidence ledger against the program. The claim that was touched at search.js line 212 becomes solid ink; the claim about the sealed sorting step stays a red dashed unknown." loading="lazy"></button>
+      </figure>
+      <p class="oh">Oh — so the gaps are part of the answer. The page shows what is known and what is not, and nothing in between is made up.</p>
+      </div>
+    </details>
+
+    <details class="section" id="how-it-works" open>
+      <summary>
+        <span class="num">04</span>
+        <span class="head-text">
+          <h2>Four rings, and one rule: look inward</h2>
+          <span class="q">How is it built?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">Under the hood, REA is a program with two front doors and a swappable set of tool tips. The code is built in rings. Outer rings may use inner rings, never the other way round.</p>
+      <p>The <strong>front doors</strong> are an MCP server (the standard plug that lets chatbots call tools) and a terminal command. Both run the same workflows.</p>
+      <p>The <strong>tool tips</strong> are adapters for Hopper, Ghidra and IDA (programs that read compiled code), a browser, JavaScript, .NET, Android, firmware and more. Pick one and the rest are untouched.</p>
+      <p>At the center sits the <strong>evidence rules</strong>: what was seen, what was worked out, and what is still unknown.</p>
+      <div class="dual">
+      <figure class="figure diagram">
+        <span class="tier tech">Architecture</span>
+        <button type="button" class="diagram-zoom" data-src="assets/architecture.svg" data-alt="Nested rings: front doors (MCP server and terminal) contain shared workflows, which contain swappable tool providers such as Hopper, Ghidra, IDA, browser, JavaScript, .NET, Android and firmware, which sit around the core evidence rules in src/domain and src/contracts. Code depends only inward." aria-label="Enlarge: Nested rings: front doors (MCP server and terminal) contain shared workflows, which contain swappable tool providers such as Hopper, Ghidra, IDA, browser, JavaScript, .NET, Android and firmware, which sit around the core evidence rules in src/domain and src/contracts. Code depends only inward."><img src="assets/architecture.svg" alt="Nested rings: front doors (MCP server and terminal) contain shared workflows, which contain swappable tool providers such as Hopper, Ghidra, IDA, browser, JavaScript, .NET, Android and firmware, which sit around the core evidence rules in src/domain and src/contracts. Code depends only inward." loading="lazy"></button>
+        <figcaption>Architecture — modules, components and how they depend on each other.</figcaption>
+      </figure>
+      <figure class="figure diagram">
+        <span class="tier tech">Data flow</span>
+        <button type="button" class="diagram-zoom" data-src="assets/flow.svg" data-alt="Left to right: the app, a tool picked for each finding, REA, a pen note with where it was found, and your project. Typing and ranking findings travel as solid lines. The sealed sorting step becomes a red dashed unknown until a live trace tool fills it in." aria-label="Enlarge: Left to right: the app, a tool picked for each finding, REA, a pen note with where it was found, and your project. Typing and ranking findings travel as solid lines. The sealed sorting step becomes a red dashed unknown until a live trace tool fills it in."><img src="assets/flow.svg" alt="Left to right: the app, a tool picked for each finding, REA, a pen note with where it was found, and your project. Typing and ranking findings travel as solid lines. The sealed sorting step becomes a red dashed unknown until a live trace tool fills it in." loading="lazy"></button>
+        <figcaption>Data flow — how a request moves through the system at runtime.</figcaption>
+      </figure>
+      </div>
+      </div>
+    </details>
+
+    <details class="section" id="use-cases" open>
+      <summary>
+        <span class="num">05</span>
+        <span class="head-text">
+          <h2>What you would do with it</h2>
+          <span class="q">Could I use this?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">This is a real screenshot from the project: REA starting its helper inside Hopper while it inspects a program. Your agent drives this; you read the answers.</p>
+      
+      <figure class="figure">
+        <span class="tier friendly">In the real world</span>
+        <button type="button" class="diagram-zoom" data-src="assets/usecase-hopper.png" data-alt="A real screenshot: REA launching its analysis helper inside Hopper while inspecting a program, with disassembly on the left, file details on the right and the helper's log below." aria-label="Enlarge: A real screenshot: REA launching its analysis helper inside Hopper while inspecting a program, with disassembly on the left, file details on the right and the helper's log below."><img src="assets/usecase-hopper.png" alt="A real screenshot: REA launching its analysis helper inside Hopper while inspecting a program, with disassembly on the left, file details on the right and the helper's log below." loading="lazy"></button>
+      </figure>
+      <div class="gallery"><div class="grid">
+      <details class="case" open>
+        <summary>
+          <span class="uc-num">1</span>
+          <span class="uc-title">Rebuild a feature you admire</span>
+          <span class="uc-tag">most common</span>
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+        </summary>
+        <div class="uc-body">
+          <p>Ask your agent how a feature works in an app you can't open. It traces the code, shows the evidence, then writes and tests a version for your project.</p>
+          <pre class="code-block"><code>Understand how search works in the Notes app,
+show me the evidence, and build a similar
+feature for my project.</code></pre>
+        </div>
+      </details>
+      <details class="case" open>
+        <summary>
+          <span class="uc-num">2</span>
+          <span class="uc-title">Compare two versions of an app</span>
+          
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+        </summary>
+        <div class="uc-body">
+          <p>Point the agent at an old and a new release. It reports what changed, with the places it looked.</p>
+        </div>
+      </details>
+      <details class="case" open>
+        <summary>
+          <span class="uc-num">3</span>
+          <span class="uc-title">Chase a crash to its cause</span>
+          
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+        </summary>
+        <div class="uc-body">
+          <p>Give it the crash. It connects the symptom to the code path and flags anything it could not reach.</p>
+        </div>
+      </details>
+      </div></div>
+      </div>
+    </details>
+
+    <details class="section" id="get-started" open>
+      <summary>
+        <span class="num">06</span>
+        <span class="head-text">
+          <h2>Two minutes to your first answer</h2>
+          <span class="q">How do I start?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">You need Node.js 22, 24 or 26+ and npm. For compiled programs you also need Hopper, Ghidra or IDA. JavaScript apps need nothing more.</p>
+      <div class="install-block"><pre class="code-block"><code>npx rea-agents setup</code></pre></div>
+      <ol class="steps">
+        <li><strong>Run the command above.</strong> It lists your agents, such as Claude Code, Codex or Cursor, and shows exactly what it will change.</li>
+        <li><strong>Approve the changes.</strong> Setup adds REA to your agent and saves a backup of every file it touches.</li>
+        <li><strong>Restart your agent.</strong> Then ask a question about a program, like the example above.</li>
+        <li><strong>Or try the terminal first.</strong> Run <code>npx -y rea-agents@latest analyze-javascript-application /path/to/app --json</code>. You will see a list of modules, imports and where each came from.</li>
+        <li><strong>What's next.</strong> Read the guides at rea.tools, and use <code>rea update</code> to stay current.</li>
+      </ol>
+      </div>
+    </details>
+
+    <details class="section" id="the-pack" open>
+      <summary>
+        <span class="num">07</span>
+        <span class="head-text">
+          <h2>Your AI can read this page too</h2>
+          <span class="q">Does my AI get it too?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">This explainer ships with a knowledge pack: the whole repo, indexed so any AI helper can search it and answer questions about REA. Humans get this page; your AI gets the pack.</p>
+      <div class="tree" style="white-space:pre">rea-knowledge-pack.zip
+├── for-humans/
+│   └── rea-primer.md        # the plain-words orientation
+└── for-ai/
+    ├── rea-kb.rvf           # searchable index of the repo
+    ├── rea-kb.passages.jsonl
+    ├── rea-symbols.json     # every public name
+    ├── rea-entrypoints.json # commands to run
+    └── kb-mcp-server.mjs    # plug it into your agent</div>
+      <div class="dl-cta"><a class="cta" href="rea-knowledge-pack.zip" download>Download the knowledge pack</a><span class="dl-meta">RVF vector KB + MCP server — drop it into your own agent.</span></div>
+      <a class="dropzone" href="rea-knowledge-pack.zip" download><span class="dz-icon" aria-hidden="true">&darr;</span><strong>Give your AI the same understanding</strong><span class="dz-hint">rea-knowledge-pack.zip</span></a>
+      </div>
+    </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="explainer-footer" role="contentinfo">
+    <div class="wrap explainer-footer-inner">
+      <p class="ef-credit">
+        Explainer page created by <strong><a href="https://stuart-kerr-card.netlify.app" rel="author noopener" target="_blank">Stuart Kerr</a></strong> at
+        <a href="https://isovision.ai" rel="noopener" target="_blank">ISOvision</a>
+        <span class="ef-fine">Built with the open-source <a href="https://github.com/stuinfla/Repo-Explainer" rel="noopener" target="_blank">explainmyrepo</a> engine.
+        Found this valuable? <a href="https://github.com/stuinfla/Repo-Explainer" rel="noopener" target="_blank">A star on GitHub</a> genuinely helps &mdash;
+        and if something's off, <a href="https://github.com/stuinfla/Repo-Explainer/issues" rel="noopener" target="_blank">open an issue</a>: happy to help fix it.</span>
+      </p>
+      <a class="ef-cta" href="https://explainmyrepo.isovision.ai" target="_blank" rel="noopener">
+        <span class="ef-cta-lead">Would you like your own repo explainer page?</span>
+        <strong>Generate one here</strong>
+        <span class="ef-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </footer>
+  <dialog class="diagram-lightbox" id="diagram-lightbox" aria-label="Enlarged diagram">
+    <button type="button" class="lightbox-close" data-close aria-label="Close">&times;</button>
+    <img id="diagram-lightbox-img" src="" alt="">
+  </dialog>
+  <script>
+  (function () {
+    var dlg = document.getElementById('diagram-lightbox');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    var img = document.getElementById('diagram-lightbox-img');
+    document.querySelectorAll('.diagram-zoom').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        img.src = btn.getAttribute('data-src');
+        img.alt = btn.getAttribute('data-alt') || '';
+        dlg.showModal();
+      });
+    });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.hasAttribute('data-close')) dlg.close();
+    });
+  })();
+  </script>
+</body>
+</html>

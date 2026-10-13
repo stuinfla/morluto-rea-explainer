@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" font-family="'IBM Plex Sans', Helvetica, Arial, sans-serif">
+<title>REA only writes down what it actually touched</title>
+<desc>On the left, a program you cannot read. A probe touches two spots; for each, a solid line draws across to a claim REA writes down, with the evidence attached. A third spot the probe cannot reach stays unknown: its claim is a red dashed line that says NOT SEEN instead of guessing.</desc>
+<style>
+.bg{fill:#FAF6EA}.panel{fill:#F3EDDC;stroke:#CFC3A3;stroke-width:2}
+.h{font-size:19px;font-weight:700;letter-spacing:.08em;fill:#47443E}
+.t{font-size:22px;fill:#2B2A28}.s{font-size:18px;fill:#47443E}.mono{font-family:'IBM Plex Mono',Menlo,monospace;font-size:17px;fill:#47443E}
+.blk{fill:#EFE7D2;stroke:#CFC3A3;stroke-width:2}
+.hit{fill:#9FB8C4;stroke:#2B2A28;stroke-width:2.5}
+.lock{fill:url(#hatch);stroke:#C8402E;stroke-width:2.5}
+.claim{fill:#FAF6EA;stroke:#2B2A28;stroke-width:2.5}
+.claimU{fill:#FAF6EA;stroke:#C8402E;stroke-width:2.5;stroke-dasharray:9 7}
+.ln{stroke:#2B2A28;stroke-width:4;fill:none;stroke-linecap:round}
+.lnU{stroke:#C8402E;stroke-width:3.5;fill:none;stroke-dasharray:9 8;stroke-linecap:round}
+.probe{stroke:#8C6420;stroke-width:5;stroke-linecap:round}.tip{fill:#B5852F;stroke:#2B2A28;stroke-width:2}
+.red{fill:#C8402E;font-weight:700}.ok{fill:#2B2A28;font-weight:700}
+/* End state is the default, so reduced-motion readers see the finished argument. */
+@media (prefers-reduced-motion: no-preference){
+ .probeG{animation:probe 9s ease-in-out infinite}
+ .hitA{animation:hitA 9s infinite}.hitB{animation:hitB 9s infinite}
+ .lnA{stroke-dasharray:300;animation:lnA 9s infinite}.lnB{stroke-dasharray:300;animation:lnB 9s infinite}
+ .cA{animation:cA 9s infinite}.cB{animation:cB 9s infinite}.cU{animation:cU 9s infinite}
+ .bounce{animation:bounce 9s infinite}
+}
+@keyframes probe{0%{transform:translate(232px,84px)}12%,26%{transform:translate(232px,129px)}38%,52%{transform:translate(232px,229px)}62%{transform:translate(232px,319px)}66%{transform:translate(222px,309px)}70%,94%{transform:translate(232px,319px)}100%{transform:translate(232px,84px)}}
+@keyframes hitA{0%,12%{opacity:0}16%,94%{opacity:1}100%{opacity:0}}
+@keyframes hitB{0%,38%{opacity:0}42%,94%{opacity:1}100%{opacity:0}}
+@keyframes lnA{0%,14%{stroke-dashoffset:300;opacity:1}28%,94%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
+@keyframes lnB{0%,40%{stroke-dashoffset:300;opacity:1}54%,94%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
+@keyframes cA{0%,27%{opacity:0}33%,94%{opacity:1}100%{opacity:0}}
+@keyframes cB{0%,53%{opacity:0}59%,94%{opacity:1}100%{opacity:0}}
+@keyframes cU{0%,68%{opacity:0}76%,94%{opacity:1}100%{opacity:0}}
+@keyframes bounce{0%,60%{opacity:0}62%,80%{opacity:1}92%,100%{opacity:0}}
+</style>
+<defs><pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#FAF6EA"/><line x1="0" y1="0" x2="0" y2="14" stroke="#C8402E" stroke-width="3" opacity=".55"/></pattern></defs>
+<rect class="bg" width="960" height="420" rx="18"/>
+<text class="h" x="40" y="48">A PROGRAM YOU CAN'T READ</text>
+<text class="h" x="560" y="48">WHAT REA WRITES DOWN</text>
+<rect class="panel" x="30" y="66" width="400" height="300" rx="14"/>
+<rect class="panel" x="530" y="66" width="400" height="300" rx="14"/>
+
+<rect class="blk" x="62" y="100" width="336" height="58" rx="10"/>
+<rect class="hit hitA" x="62" y="100" width="336" height="58" rx="10"/>
+<text class="mono" x="82" y="136">0x4f2a  3c 11 a8 7e …</text>
+
+<rect class="blk" x="62" y="200" width="336" height="58" rx="10"/>
+<rect class="hit hitB" x="62" y="200" width="336" height="58" rx="10"/>
+<text class="mono" x="82" y="236">0x9be0  02 f4 6d 1a …</text>
+
+<rect class="lock" x="62" y="290" width="336" height="58" rx="10"/>
+<text class="s" x="82" y="326">sealed: REA cannot look in here</text>
+
+<path class="ln lnA" d="M398 129 C 470 129, 470 129, 556 129"/>
+<path class="ln lnB" d="M398 229 C 470 229, 470 229, 556 229"/>
+<path class="lnU cU" d="M398 319 C 470 319, 470 319, 556 319"/>
+
+<g class="cA"><rect class="claim" x="556" y="100" width="348" height="58" rx="10"/>
+ <text class="t" x="574" y="126">Search ranks in two steps</text><text class="s" x="574" y="148"><tspan class="ok">Evidence:</tspan> the spot it touched</text></g>
+<g class="cB"><rect class="claim" x="556" y="200" width="348" height="58" rx="10"/>
+ <text class="t" x="574" y="226">Notes are stored locally</text><text class="s" x="574" y="248"><tspan class="ok">Evidence:</tspan> the spot it touched</text></g>
+<g class="cU"><rect class="claimU" x="556" y="290" width="348" height="58" rx="10"/>
+ <text class="t" x="574" y="316">How it locks the data</text><text class="s" x="574" y="338"><tspan class="red">NOT SEEN</tspan> — says so, no guessing</text></g>
+
+<g class="ring hitA"><circle cx="232" cy="129" r="16" fill="none" stroke="#2B2A28" stroke-width="3"/></g>
+<g class="ring hitB"><circle cx="232" cy="229" r="16" fill="none" stroke="#2B2A28" stroke-width="3"/></g>
+<g class="probeG" transform="translate(232 129)">
+ <circle r="26" fill="#B5852F" opacity=".22"/>
+ <line class="probe" x1="46" y1="-62" x2="4" y2="-4" stroke-width="9"/><circle class="tip" r="11"/>
+ <g class="bounce"><text class="red" x="22" y="30" font-size="20">blocked</text></g>
+</g>
+<text class="s" x="40" y="398">Every claim is tied to the spot it came from. Where it can't look, it says so in red.</text>
+</svg>

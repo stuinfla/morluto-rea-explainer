@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" data-archetype="fan" font-family="Helvetica, Arial, sans-serif">
+<title>One door, many kinds of target</title>
+<desc>Your question goes to an AI helper, through REA, and fans out to six kinds of target: desktop apps, web-app code, websites, Android apps, device firmware and running programs. What comes back is an answer, the evidence for it, and the gaps.</desc>
+<style>
+.t{fill:#2B2A28;font-size:24px}.tb{fill:#2B2A28;font-size:26px;font-weight:700}.s{fill:#47443E;font-size:21px}
+.ray{stroke:#B5852F;stroke-width:3;fill:none}
+.pulse{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+ .ray{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 7s ease-out infinite}
+ .r2{animation-delay:.25s}.r3{animation-delay:.5s}.r4{animation-delay:.75s}.r5{animation-delay:1s}.r6{animation-delay:1.25s}
+ .pill{opacity:.35;animation:lit 7s ease-out infinite}
+ .p2{animation-delay:.25s}.p3{animation-delay:.5s}.p4{animation-delay:.75s}.p5{animation-delay:1s}.p6{animation-delay:1.25s}
+ .gap{opacity:.2;animation:lit 7s ease-out infinite;animation-delay:2s}
+}
+@keyframes draw{0%{stroke-dashoffset:420}25%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:420}}
+@keyframes lit{0%{opacity:.35}25%,90%{opacity:1}100%{opacity:.35}}
+</style>
+<rect width="1000" height="620" fill="#F3EDDC"/>
+<g stroke="#CFC3A3" stroke-width="1"><path d="M0 100H1000M0 200H1000M0 300H1000M0 400H1000M0 500H1000M100 0V620M200 0V620M300 0V620M400 0V620M500 0V620M600 0V620M700 0V620M800 0V620M900 0V620" opacity=".5"/></g>
+<text x="40" y="52" class="tb">One door. Many kinds of target.</text>
+<!-- question -->
+<rect x="30" y="215" width="190" height="90" rx="12" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="125" y="253" text-anchor="middle" class="t">your</text><text x="125" y="283" text-anchor="middle" class="t">question</text>
+<path d="M220 260H262" stroke="#2B2A28" stroke-width="3"/>
+<!-- helper + REA hub -->
+<rect x="262" y="215" width="150" height="90" rx="12" fill="#EFE7D2" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="337" y="253" text-anchor="middle" class="t">AI</text><text x="337" y="283" text-anchor="middle" class="t">helper</text>
+<path d="M412 260H452" stroke="#2B2A28" stroke-width="3"/>
+<circle cx="520" cy="260" r="68" fill="#E6CF98" stroke="#8C6420" stroke-width="4"/>
+<text x="520" y="271" text-anchor="middle" class="tb" font-size="34">REA</text>
+<!-- rays -->
+<path class="ray" d="M586 240C640 150 660 112 720 112"/>
+<path class="ray r2" d="M588 250C650 200 670 190 720 190"/>
+<path class="ray r3" d="M588 262C650 262 670 268 720 268"/>
+<path class="ray r4" d="M588 272C650 320 670 346 720 346"/>
+<path class="ray r5" d="M586 282C640 380 660 424 720 424"/>
+<path class="ray r6" d="M580 296C630 420 650 502 720 502"/>
+<g class="pill"><rect x="720" y="82" width="250" height="60" rx="10" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2"/><text x="845" y="120" text-anchor="middle" class="t">desktop apps</text></g>
+<g class="pill p2"><rect x="720" y="160" width="250" height="60" rx="10" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2"/><text x="845" y="198" text-anchor="middle" class="t">web-app code</text></g>
+<g class="pill p3"><rect x="720" y="238" width="250" height="60" rx="10" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2"/><text x="845" y="276" text-anchor="middle" class="t">websites</text></g>
+<g class="pill p4"><rect x="720" y="316" width="250" height="60" rx="10" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2"/><text x="845" y="354" text-anchor="middle" class="t">Android apps</text></g>
+<g class="pill p5"><rect x="720" y="394" width="250" height="60" rx="10" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2"/><text x="845" y="432" text-anchor="middle" class="t">device firmware</text></g>
+<g class="pill p6"><rect x="720" y="472" width="250" height="60" rx="10" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2"/><text x="845" y="510" text-anchor="middle" class="t">running programs</text></g>
+<!-- return -->
+<path d="M520 328V560H40" fill="none" stroke="#2B2A28" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round"/>
+<rect x="40" y="520" width="340" height="80" rx="10" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2.5"/>
+<text x="56" y="552" class="t">answer + evidence</text>
+<g class="gap"><text x="56" y="583" class="t" fill="#C8402E" style="fill:#C8402E">+ the gaps, in red</text></g>
+<text x="40" y="440" class="s">Findings come back with</text><text x="40" y="468" class="s">where they were found.</text>
+</svg>
