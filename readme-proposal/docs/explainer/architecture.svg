@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" role="img" data-archetype="containment" font-family="Helvetica, Arial, sans-serif">
+<title>How REA is built: four layers, dependencies point inward</title>
+<desc>Nested layers. Outermost: two front doors, the MCP server (src/main) and the command line (src/cli). Next: shared workflows (src/application) and wiring (src/composition). Next: tool adapters for Hopper, Ghidra, IDA, browser, JavaScript, .NET, Android and firmware, supervised by src/process. Innermost core: src/domain and src/contracts, the pure evidence and unknowns rules. Code only depends inward.</desc>
+<style>
+.t{fill:#2B2A28;font-size:22px}.tb{fill:#2B2A28;font-size:25px;font-weight:700}.m{fill:#47443E;font-size:19px;font-family:Menlo,Consolas,monospace}
+@media (prefers-reduced-motion:no-preference){
+ .L{opacity:.25;animation:lay 9s ease-out infinite}.L2{animation-delay:.9s}.L3{animation-delay:1.8s}.L4{animation-delay:2.7s}
+}
+@keyframes lay{0%{opacity:.25}20%,88%{opacity:1}100%{opacity:.25}}
+</style>
+<rect width="1000" height="670" fill="#F3EDDC"/>
+<g class="L"><rect x="20" y="20" width="960" height="600" rx="18" fill="#FAF6EA" stroke="#2B2A28" stroke-width="3"/>
+<text x="44" y="56" class="tb">Front doors</text><text x="200" y="56" class="m">src/main (MCP server) · src/cli (terminal)</text></g>
+<g class="L L2"><rect x="50" y="80" width="900" height="520" rx="16" fill="#EFE7D2" stroke="#8C6420" stroke-width="3"/>
+<text x="72" y="116" class="tb">Shared workflows</text><text x="300" y="116" class="m">src/application · src/composition</text></g>
+<g class="L L3"><rect x="80" y="140" width="840" height="440" rx="14" fill="#DCE6EA" stroke="#2B2A28" stroke-width="3"/>
+<text x="102" y="176" class="tb">Tool tips (providers)</text><text x="350" y="176" class="m">each one swappable</text>
+<g font-size="21" class="t">
+<rect x="102" y="196" width="150" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="177" y="226" text-anchor="middle" class="t">Hopper</text>
+<rect x="266" y="196" width="150" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="341" y="226" text-anchor="middle" class="t">Ghidra</text>
+<rect x="430" y="196" width="150" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="505" y="226" text-anchor="middle" class="t">IDA</text>
+<rect x="594" y="196" width="150" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="669" y="226" text-anchor="middle" class="t">browser</text>
+<rect x="758" y="196" width="144" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="830" y="226" text-anchor="middle" class="t">Android</text>
+<rect x="102" y="252" width="190" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="197" y="282" text-anchor="middle" class="t">JavaScript</text>
+<rect x="306" y="252" width="150" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="381" y="282" text-anchor="middle" class="t">.NET</text>
+<rect x="470" y="252" width="190" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="565" y="282" text-anchor="middle" class="t">firmware</text>
+<rect x="674" y="252" width="228" height="46" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="1.5"/><text x="788" y="282" text-anchor="middle" class="t">and more…</text>
+</g>
+<rect x="102" y="314" width="800" height="44" rx="8" fill="#FAF6EA" stroke="#8C6420" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="118" y="343" class="t" style="font-size:21px">src/process: owns every helper program, with time limits</text></g>
+<g class="L L4"><rect x="110" y="388" width="780" height="170" rx="12" fill="#E6CF98" stroke="#8C6420" stroke-width="4"/>
+<text x="132" y="426" class="tb">Core: the evidence rules</text><text x="132" y="456" class="m">src/domain · src/contracts</text>
+<text x="132" y="494" class="t">What was seen, what was worked out,</text><text x="132" y="524" class="t">and what is still unknown. No tool code in here.</text></g>
+<text x="500" y="656" text-anchor="middle" class="t" style="font-size:20px;fill:#47443E">Code may only depend inward: outer rings call inner rings, never the reverse.</text>
+</svg>

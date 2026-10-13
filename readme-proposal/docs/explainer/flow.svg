@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" data-archetype="journey" font-family="Helvetica, Arial, sans-serif">
+<title>Three findings travel from the app to your project; the hidden one is carried as a red gap</title>
+<desc>Left to right: the app you do not own, a tool picked for it, REA, a note with where it was found, and your project. Two findings (typing, ranking) travel as solid ink. The third, a hidden sorting step, stops at the sealed housing and continues as a red dashed unknown until a live trace fills it in.</desc>
+<style>
+.t{fill:#2B2A28;font-size:22px}.tb{fill:#2B2A28;font-size:24px;font-weight:700}.m{fill:#47443E;font-size:19px;font-family:Menlo,Consolas,monospace}.r{fill:#C8402E;font-size:21px;font-weight:700}
+.solid{stroke:#2B2A28;stroke-width:7;fill:none;stroke-linecap:round}
+.fill3{stroke:#2B2A28;stroke-width:7;fill:none;stroke-linecap:round}
+.gapL{stroke:#C8402E;stroke-width:5;fill:none;stroke-dasharray:12 10}
+.unk{opacity:0}.seen{opacity:1}.probe{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+ .solid{stroke-dasharray:800;stroke-dashoffset:800;animation:go 11s ease-in-out infinite}
+ .s2{animation-delay:.6s}
+ .a3{stroke-dasharray:400;stroke-dashoffset:400;animation:go3 11s ease-in-out infinite}
+ .gapL{opacity:0;animation:gap 11s ease-in-out infinite}
+ .unk{animation:unk 11s ease-in-out infinite}
+ .probe{opacity:0;animation:probe 11s ease-in-out infinite}
+ .fill3{stroke-dasharray:420;stroke-dashoffset:420;animation:f3 11s ease-in-out infinite}
+ .seen{opacity:0;animation:seen 11s ease-in-out infinite}
+}
+@keyframes go{0%,5%{stroke-dashoffset:800}30%,94%{stroke-dashoffset:0}100%{stroke-dashoffset:800}}
+@keyframes go3{0%,5%{stroke-dashoffset:400}22%,94%{stroke-dashoffset:0}100%{stroke-dashoffset:400}}
+@keyframes gap{0%,24%{opacity:0}30%,58%{opacity:1}64%,100%{opacity:0}}
+@keyframes unk{0%,28%{opacity:0}34%,58%{opacity:1}64%,100%{opacity:0}}
+@keyframes probe{0%,52%{opacity:0}58%,78%{opacity:1}84%,100%{opacity:0}}
+@keyframes f3{0%,60%{stroke-dashoffset:420}80%,94%{stroke-dashoffset:0}100%{stroke-dashoffset:420}}
+@keyframes seen{0%,78%{opacity:0}84%,94%{opacity:1}100%{opacity:0}}
+</style>
+<rect width="1000" height="640" fill="#F3EDDC"/>
+<!-- station headers -->
+<g class="tb" text-anchor="middle">
+<text x="120" y="44" class="tb">the app</text><text x="320" y="44" class="tb">pick a tool</text><text x="520" y="44" class="tb">REA</text><text x="720" y="44" class="tb">pen note</text><text x="900" y="44" class="tb">your project</text></g>
+<g stroke="#CFC3A3" stroke-width="2" stroke-dasharray="3 7"><path d="M220 60V560M420 60V560M620 60V560M810 60V560"/></g>
+<!-- journey lines -->
+<path class="solid" d="M200 205H842"/>
+<path class="solid s2" d="M200 325H842"/>
+<path class="solid a3" d="M200 465H320"/>
+<path class="gapL" d="M400 465H842"/>
+<path class="fill3" d="M400 465H842"/>
+<!-- app column -->
+<rect x="20" y="70" width="200" height="500" rx="14" fill="#9FB8C4" stroke="#2B2A28" stroke-width="3"/>
+<text x="120" y="100" text-anchor="middle" class="t" style="font-size:19px">one feature:</text><text x="120" y="124" text-anchor="middle" class="t" style="font-size:19px">search</text>
+<rect x="40" y="170" width="160" height="70" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2"/><text x="120" y="200" text-anchor="middle" class="t" style="font-size:21px">typing in</text><text x="120" y="226" text-anchor="middle" class="t" style="font-size:21px">the box</text>
+<rect x="40" y="290" width="160" height="70" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2"/><text x="120" y="320" text-anchor="middle" class="t" style="font-size:21px">ranking the</text><text x="120" y="346" text-anchor="middle" class="t" style="font-size:21px">results</text>
+<rect x="40" y="420" width="160" height="90" rx="8" fill="#1F1E1C" stroke="#2B2A28" stroke-width="2"/><text x="120" y="456" text-anchor="middle" class="t" style="fill:#F3EDDC;font-size:21px">sealed step:</text><text x="120" y="484" text-anchor="middle" class="t" style="fill:#F3EDDC;font-size:21px">the sorting</text>
+<!-- tools -->
+<g font-size="20"><rect x="240" y="170" width="160" height="70" rx="8" fill="#E6CF98" stroke="#8C6420" stroke-width="2.5"/><text x="320" y="200" text-anchor="middle" class="t" style="font-size:20px">code reader</text><text x="320" y="226" text-anchor="middle" class="t" style="font-size:20px">(static)</text>
+<rect x="240" y="290" width="160" height="70" rx="8" fill="#E6CF98" stroke="#8C6420" stroke-width="2.5"/><text x="320" y="320" text-anchor="middle" class="t" style="font-size:20px">decompiler</text><text x="320" y="346" text-anchor="middle" class="t" style="font-size:20px">(static)</text>
+<rect x="240" y="420" width="160" height="90" rx="8" fill="#FAF6EA" stroke="#C8402E" stroke-width="3" stroke-dasharray="8 6"/><text x="320" y="456" text-anchor="middle" class="r" style="font-size:20px">no tip fits</text><text x="320" y="484" text-anchor="middle" class="t" style="font-size:19px;fill:#C8402E">yet</text></g>
+<g class="probe"><rect x="240" y="520" width="160" height="56" rx="8" fill="#9FB8C4" stroke="#2B2A28" stroke-width="2.5"/><text x="320" y="546" text-anchor="middle" class="t" style="font-size:19px">live trace tip</text><text x="320" y="568" text-anchor="middle" class="t" style="font-size:17px">runs the app</text></g>
+<!-- REA hub -->
+<rect x="440" y="70" width="160" height="500" rx="14" fill="#EFE7D2" stroke="#8C6420" stroke-width="3"/>
+<text x="520" y="110" text-anchor="middle" class="t" style="font-size:20px">one door</text><text x="520" y="136" text-anchor="middle" class="t" style="font-size:20px">for the agent</text>
+<circle cx="520" cy="205" r="12" fill="#8C6420"/><circle cx="520" cy="325" r="12" fill="#8C6420"/><circle cx="520" cy="465" r="12" fill="#8C6420"/>
+<!-- pen notes -->
+<rect x="640" y="170" width="160" height="70" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2"/><text x="720" y="200" text-anchor="middle" class="m" style="font-size:17px">search.js:212</text><text x="720" y="224" text-anchor="middle" class="t" style="font-size:18px">typing handler</text>
+<rect x="640" y="290" width="160" height="70" rx="8" fill="#FAF6EA" stroke="#2B2A28" stroke-width="2"/><text x="720" y="320" text-anchor="middle" class="m" style="font-size:17px">sub_1F3A0</text><text x="720" y="344" text-anchor="middle" class="t" style="font-size:18px">scoring step</text>
+<g class="unk"><rect x="640" y="420" width="160" height="90" rx="8" fill="#FAF6EA" stroke="#C8402E" stroke-width="3" stroke-dasharray="8 6"/><text x="720" y="456" text-anchor="middle" class="r">unknown</text><text x="720" y="484" text-anchor="middle" class="t" style="font-size:18px;fill:#C8402E">not reached</text></g>
+<g class="seen"><rect x="640" y="420" width="160" height="90" rx="8" fill="#FAF6EA" stroke="#3E6B52" stroke-width="3"/><text x="720" y="450" text-anchor="middle" class="m" style="font-size:17px">sort.js:88</text><text x="720" y="476" text-anchor="middle" class="t" style="font-size:18px">seen while</text><text x="720" y="498" text-anchor="middle" class="t" style="font-size:18px">running</text></g>
+<!-- project column -->
+<rect x="830" y="70" width="150" height="500" rx="14" fill="#FAF6EA" stroke="#2B2A28" stroke-width="3"/>
+<text x="905" y="100" text-anchor="middle" class="t" style="font-size:19px">your code</text>
+<rect x="842" y="170" width="126" height="70" rx="8" fill="#E6CF98" stroke="#8C6420" stroke-width="2"/><text x="905" y="212" text-anchor="middle" class="t" style="font-size:20px">built</text>
+<rect x="842" y="290" width="126" height="70" rx="8" fill="#E6CF98" stroke="#8C6420" stroke-width="2"/><text x="905" y="332" text-anchor="middle" class="t" style="font-size:20px">built</text>
+<rect x="842" y="420" width="126" height="90" rx="8" fill="#FAF6EA" stroke="#C8402E" stroke-width="2" stroke-dasharray="8 6"/><text x="905" y="456" text-anchor="middle" class="t" style="font-size:19px;fill:#C8402E">waits for</text><text x="905" y="482" text-anchor="middle" class="t" style="font-size:19px;fill:#C8402E">the trace</text>
+<g class="probe"><text x="520" y="610" text-anchor="middle" class="t" style="font-size:20px">swap the tip → the gap fills with a real line</text></g>
+</svg>
