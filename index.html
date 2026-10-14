@@ -95,15 +95,28 @@
           <p class="sub">Where it can't look, it says so in red instead of guessing.</p>
           <p class="attrib-lede">An <strong>independent explainer</strong> for <strong>morluto <span class="attrib-handle">(morluto)</span></strong>'s <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">REA</a> — built to take you from "never seen it" to "ready to implement".</p>
           <div class="cta-row">
-          <a class="cta" href="#get-started">Get started</a>
+          <a class="cta" href="#overview">Watch the 82-second overview</a>
+          <a class="cta ghost" href="#get-started">Get started</a>
           <a class="cta ghost" href="https://github.com/morluto/rea" target="_blank" rel="noopener">See the code</a>
           </div>
         <div class="meta-row"><span><b>License</b> MIT</span><span><b>Version</b> 6.4.0</span><span><b>Runs</b> on your computer</span></div>
         </div>
-        <figure class="hero-art">
-          <button type="button" class="diagram-zoom" data-src="assets/hero.png" data-alt="REA: A top-down bench shot on cream vellum: a brass pantograph pinned at the top-left corner; at its left tip a steel stylus rests against a disassembled blue-grey cam-and-lever mechanism (the 'feature' from someone else's app); at its right tip a graphite pen has half-drawn the same cam at 2:1 scale, each stroke carrying a tiny mono tag like 'sub_1F3A0 +0x24' or 'renderer/search.js:212'; one lobe of the cam sits inside a sealed black housing, and on the sheet that lobe is a dashed red-pencil outline stamped 'NOT REACHED — runtime trace required'." aria-label="Enlarge: REA: A top-down bench shot on cream vellum: a brass pantograph pinned at the top-left corner; at its left tip a steel stylus rests against a disassembled blue-grey cam-and-lever mechanism (the 'feature' from someone else's app); at its right tip a graphite pen has half-drawn the same cam at 2:1 scale, each stroke carrying a tiny mono tag like 'sub_1F3A0 +0x24' or 'renderer/search.js:212'; one lobe of the cam sits inside a sealed black housing, and on the sheet that lobe is a dashed red-pencil outline stamped 'NOT REACHED — runtime trace required'."><img src="assets/hero.png" alt="REA: A top-down bench shot on cream vellum: a brass pantograph pinned at the top-left corner; at its left tip a steel stylus rests against a disassembled blue-grey cam-and-lever mechanism (the 'feature' from someone else's app); at its right tip a graphite pen has half-drawn the same cam at 2:1 scale, each stroke carrying a tiny mono tag like 'sub_1F3A0 +0x24' or 'renderer/search.js:212'; one lobe of the cam sits inside a sealed black housing, and on the sheet that lobe is a dashed red-pencil outline stamped 'NOT REACHED — runtime trace required'."></button>
+        <figure class="hero-art hero-video" id="overview">
+          <video controls preload="metadata" playsinline poster="assets/overview-poster.jpg" width="1280" height="720">
+            <source src="assets/overview.mp4" type="video/mp4">
+            Your browser can't play this video. <a href="assets/overview.mp4" target="_blank" rel="noopener">Open the 82-second overview</a>.
+          </video>
+          <figcaption>82-second narrated overview, made with Google NotebookLM from REA's README and this page. A machine-made summary: the sections below and <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">the repo</a> are the source of truth.</figcaption>
         </figure>
       </div>
+    </div>
+  </section>
+  <section class="trailer-band overview-top" aria-label="How REA works, in five steps">
+    <div class="wrap">
+      <figure class="trailer-fig overview-info">
+        <a href="assets/overview-infographic.jpg" target="_blank" rel="noopener"><img src="assets/overview-infographic.jpg" width="1800" height="844" loading="lazy" alt="How REA works in five steps: 1 ask your AI agent to inspect a target app; 2 the agent calls REA through MCP or the command line; 3 REA runs local adapters (Ghidra, Hopper, a JavaScript parser) on your computer; 4 it logs only the code locations it touched and marks unreached paths unknown; 5 the agent explains the feature with proof and builds working code."></a>
+        <figcaption>The five steps as one picture. Tap it to open it full size.</figcaption>
+      </figure>
     </div>
   </section>
   <section class="scene-band" data-hero-scene aria-label="How REA works, performed">
@@ -150,19 +163,13 @@
       </figure>
     </div>
   </section>
-  <section class="trailer-band" data-overview aria-label="An 82-second narrated overview of REA">
-    <div class="wrap">
-      <figure class="trailer-fig">
-        <video controls preload="metadata" playsinline poster="assets/overview-poster.jpg" width="1280" height="720">
-          <source src="assets/overview.mp4" type="video/mp4">
-          Your browser can't play this video. <a href="assets/overview.mp4" target="_blank" rel="noopener">Open the 82-second overview</a>.
-        </video>
-        <figcaption>The 82-second narrated overview, made with Google NotebookLM from REA's README and this page. It is a machine-made summary, so treat the sections below and <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">the repo</a> as the source of truth. <a href="assets/overview.mp4" target="_blank" rel="noopener">Open the video in its own tab</a>.</figcaption>
-      </figure>
-    </div>
-  </section>
   <style>
     .trailer-band{padding:0 0 28px}
+    .overview-top{padding-top:8px}
+    .hero-video video{display:block;width:100%;height:auto;border-radius:18px;background:#F3EDDC;box-shadow:0 18px 50px -24px rgba(43,42,40,.45)}
+    @media (max-width:47.99em){.hero-video{order:-1}}
+    .hero-video figcaption{font-size:.9rem;color:#47443E;margin-top:10px}
+    .overview-info{margin-top:18px}.overview-info img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 18px 50px -24px rgba(43,42,40,.45)}
     .trailer-fig{margin:0}.trailer-fig video{display:block;width:100%;height:auto;border-radius:18px;background:#F3EDDC;box-shadow:0 18px 50px -24px rgba(43,42,40,.45)}
     .trailer-fig figcaption{font-size:.95rem;color:#47443E;margin-top:10px}
   </style>
